@@ -3,7 +3,7 @@
 title: Collision Sim
 ---
 classDiagram
-		Engine {
+		class Engine {
 			- array[body] bodies
 			- calcAcc(bodies)
 			- calcVel(bodies)
@@ -12,7 +12,7 @@ classDiagram
 			+ bodies getBodies()
 		}
 
-		Body {
+		class Body {
 			- double MASS
 			- double RADIUS
 			- double velocity
