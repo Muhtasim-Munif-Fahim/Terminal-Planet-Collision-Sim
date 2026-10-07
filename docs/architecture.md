@@ -1,3 +1,4 @@
+```mermaid
 ---
 title: Collision Sim
 ---
@@ -19,3 +20,4 @@ Body {
 }
 
 Engine <|-- Body
+```
