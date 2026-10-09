@@ -5,12 +5,15 @@ import numpy as np
 
 @dataclass
 class Body:
+    """Celestial body with mutable kinematic state."""
+
     name: str
     mass: float
     radius: float
-    position: np.ndarray
-    velocity: np.ndarray
+    # Mutable kinematic state — callers update these in place each step.
     acceleration: np.ndarray = field(default_factory=lambda: np.zeros(3))
+    position: np.ndarray = field(default_factory=lambda: np.zeros(3))
+    velocity: np.ndarray = field(default_factory=lambda: np.zeros(3))
     shape: str = "sphere"
 
     def __repr__(self) -> str:
